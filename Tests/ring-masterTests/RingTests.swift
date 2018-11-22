@@ -5,12 +5,11 @@ import XCTest
 class RingTests: XCTestCase {
     
     func doOperatorComputations<T: Ring>(x: T, y: T) -> T {
-//        let z = x * y
-//        let w = z - y;
-//        let v = -w;
-//        let u = v + x + y
-//        return u
-        return x
+        let z = x * y
+        let w = z - y;
+        let v = -w;
+        let u = v + x + y
+        return u
     }
     
     func testOperators() {
@@ -19,4 +18,8 @@ class RingTests: XCTestCase {
         let zero = doOperatorComputations(x: 0, y: 0)
         XCTAssertEqual(zero, 0)
     }
+    
+    static var allTests = [
+        ("testOperators", testOperators),
+        ]
 }
