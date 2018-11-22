@@ -5,6 +5,9 @@ import PackageDescription
 
 let package = Package(
     name: "ring-master",
+    products: [
+        .library(name: "ring-master", targets: ["ring-master"]),
+    ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
@@ -15,5 +18,9 @@ let package = Package(
         .target(
             name: "ring-master",
             dependencies: []),
+        .testTarget(
+            name: "ring-master-tests",
+            dependencies: ["ring-master"],
+            path: "Tests"),
     ]
 )
