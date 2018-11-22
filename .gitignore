@@ -42,7 +42,7 @@ Package.resolved
 
 # the xcodeproj should not be committed
 
-*.xcoeproj/*
+*.xcodeproj/*
 
 # CocoaPods
 #
