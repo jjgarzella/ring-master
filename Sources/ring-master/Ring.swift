@@ -34,7 +34,8 @@ enum EuclideanError: Error {
 }
 
 protocol EuclideanDomain : Ring {
-    func EuclideanFunction() throws -> Int
+    // Not enforced: this integer must be positive.
+    func deg() throws -> Int
 }
 
 extension Int : Ring {}
